@@ -1,6 +1,6 @@
 <div>
 <h3>
-Hi there, I'm Jaehun! 👋
+Hi there, I'm MINDA! 👋
 </h3>
 </div>
 
