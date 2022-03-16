@@ -1,7 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { selectUser } from "./features/userSlice";
+import { auth } from "./firebase";
 import "./Navbar.css";
 
 function Navbar() {
+  const user = useSelector(selectUser);
   return (
     <div className="navbar">
       <div className="qHeader-logo">
@@ -21,7 +25,9 @@ function Navbar() {
       </div>
 
       <div className="qHeader-Rem">
-        <div className="qHeader-avatar">Avartar</div>
+        <div className="qHeader-avatar">
+          <img src={user.photo} alt="프로필" onClick={() => auth.signOut()} />
+        </div>
         Language
         <button>질문하기</button>
       </div>
